@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/goods_list_iv"
+            android:layout_width="@dimen/dis150"
+            android:layout_height="@dimen/dis150"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/default_goods"/>
+
+        <ImageView
+            android:id="@+id/iv_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/vip"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goods_list_iv"
+        android:layout_marginTop="@dimen/dis5"
+        android:layout_marginBottom="@dimen/dis5"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dis10"
+        android:paddingRight="@dimen/dis10">
+
+        <TextView
+            android:id="@+id/goods_list_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dis3"
+            android:paddingBottom="@dimen/dis3"
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font14"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dis3"
+            android:paddingBottom="@dimen/dis3">
+
+            <TextView
+                android:id="@+id/tv_acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="￥"
+                android:textColor="@color/CC8_3C_3C"
+                android:textSize="@dimen/font12"/>
+
+            <TextView
+                android:id="@+id/goods_list_tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_acc"
+                android:text=""
+                android:textColor="@color/CC8_3C_3C"
+                android:textSize="@dimen/font16"/>
+
+            <TextView
+                android:id="@+id/goods_list_tv_op"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dis2"
+
+                android:layout_toRightOf="@+id/goods_list_tv_price"
+                android:text=""
+                android:textColor="@color/C85_85_85"
+                android:textSize="@dimen/font10"/>
+
+            <TextView
+                android:id="@+id/goods_list_tv_judge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:paddingLeft="@dimen/dis4"
+                android:paddingTop="@dimen/dis2"
+                android:paddingRight="@dimen/dis4"
+                android:paddingBottom="@dimen/dis5"
+                android:text="x"
+                android:textColor="@color/C64_64_64"
+                android:textSize="@dimen/font10"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/goods_list_ll_hot"
+            android:layout_toRightOf="@id/goods_list_iv"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dis3"
+            android:paddingRight="@dimen/dis4"
+            android:paddingBottom="@dimen/dis3"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返现："
+                android:textColor="@color/C10_10_10"
+                android:textSize="@dimen/font10"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/goods_list_tv_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/CE8_3C_3C"
+                android:textSize="@dimen/font10"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/goods_list_ll_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dis34"
+            android:paddingTop="@dimen/dis5"
+            android:paddingBottom="@dimen/dis5"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|bottom"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/goods_list_tv_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_corner_e8_stroke0_5_white_radius2"
+                    android:paddingLeft="@dimen/dis4"
+                    android:paddingTop="@dimen/dis2"
+                    android:paddingRight="@dimen/dis4"
+                    android:paddingBottom="@dimen/dis2"
+                    android:text="热卖"
+                    android:textColor="@color/CE8_3C_3C"
+                    android:textSize="@dimen/font10"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/goods_list_tv_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dis2"
+                    android:paddingBottom="@dimen/dis2"
+                    android:text=""
+                    android:textColor="@color/C10_10_10"
+                    android:textSize="@dimen/font13"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

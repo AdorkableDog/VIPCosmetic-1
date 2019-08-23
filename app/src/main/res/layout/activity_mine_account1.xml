@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:ptr="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/CF8_F9_FB"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_corner_shade"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <include layout="@layout/titlebar_layout"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis215"
+        android:background="@drawable/shape_corner_shade"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dis15"
+            android:background="@drawable/shape_background"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:id="@+id/tv_withdrawal"
+                android:layout_width="@dimen/dis105"
+                android:layout_height="@dimen/dis34"
+                android:background="@drawable/selector_left_text_color"
+                android:gravity="center"
+                android:text="现金"
+                android:textColor="@color/selector_main_color"
+                android:textSize="@dimen/font16"/>
+
+            <TextView
+                android:id="@+id/tv_cash"
+                android:layout_width="@dimen/dis105"
+                android:layout_height="@dimen/dis34"
+                android:background="@drawable/selector_right_text_color"
+                android:gravity="center"
+                android:text="已提现"
+                android:textColor="@color/selector_main_color"
+                android:textSize="@dimen/font16"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:drawablePadding="@dimen/dis10"
+            android:text="0.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font28"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dis10"
+            android:text="账户余额"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font13"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dis10"
+        android:layout_marginTop="-40dp"
+        android:layout_marginRight="@dimen/dis10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dis8"
+        app:cardElevation="@dimen/dis3"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/ll_withdrawal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis70"
+            android:layout_marginLeft="@dimen/dis15"
+            android:layout_marginRight="@dimen/dis15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/mineac"
+                android:drawablePadding="@dimen/dis10"
+                android:gravity="center"
+                android:text="去提现"
+                android:textColor="@color/black_color1"
+                android:textSize="@dimen/font17"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/next_center_order"
+                android:textSize="@dimen/font14"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dis20"
+        android:paddingTop="@dimen/dis10"
+        android:text="收入明细"/>
+
+    <com.yj.cosmetics.widget.ProgressLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dis10"
+        ptr:progressLayoutDefStyle="@style/ProgressLayout">
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/xrecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_soid"/>
+    </com.yj.cosmetics.widget.ProgressLayout>
+
+
+</LinearLayout>

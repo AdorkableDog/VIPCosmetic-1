@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/title_layout"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/dis70"
+              android:background="@drawable/shape_corner_shade"
+              android:orientation="horizontal"
+              android:paddingTop="@dimen/dis20">
+
+    <RelativeLayout
+        android:id="@+id/rl_left"
+        android:layout_width="@dimen/dis50"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font15"/>
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/font16"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_right"
+        android:layout_width="@dimen/dis50"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/C10_10_10"
+            android:textSize="@dimen/font15"/>
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</LinearLayout>

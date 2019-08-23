@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/titlebar_layout2"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/dis15"
+        android:src="@mipmap/success"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/dis5"
+        android:text="提现申请成功"
+        android:textColor="@color/black_color1"/>
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="￥5000"
+        android:textColor="@color/black_color1"
+        android:textSize="@dimen/font28"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:layout_marginTop="@dimen/dis20"
+        android:background="@color/CE7_E7_E7"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dis15"
+            android:text="提现方式"
+            android:textColor="@color/black_color1"/>
+
+        <View
+            android:layout_width="@dimen/dis0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/zhifubaozhifu"
+            android:drawablePadding="@dimen/dis5"
+            android:gravity="center"
+            android:padding="@dimen/dis15"
+            android:text="支付宝"
+            android:textColor="@color/black_color1"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis0.5"
+        android:background="@color/CE7_E7_E7"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dis15"
+        android:text="提现状态"
+        android:textColor="@color/black_color1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dis20">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/shape_oval_solid"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@mipmap/line"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/shape_oval_solid"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dis0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dis10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现申请已提交"
+                android:textColor="@color/black_color1"
+                android:textSize="@dimen/font14"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dis5"
+                android:text="2019-2-14 10:00:30"
+                android:textColor="@color/black_color1"
+                android:textSize="@dimen/font12"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dis35"
+                android:text="审核通过后，预计两小时到账"
+                android:textColor="@color/black_color1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dis15"
+        android:text="到账时间"
+        android:textColor="@color/black_color1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dis15"
+        android:text="1.支付宝审核成功提现到账时间2小时内。"
+        android:textSize="@dimen/font14"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dis15"
+        android:text="2.节假日提现顺延。"
+        android:textSize="@dimen/font14"/>
+
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis45"
+        android:layout_marginLeft="@dimen/dis10"
+        android:layout_marginTop="@dimen/dis40"
+        android:layout_marginRight="@dimen/dis10"
+        android:layout_marginBottom="@dimen/dis20"
+        android:background="@drawable/shape_text_bg"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font15"/>
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_withdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dis10"
+        android:orientation="horizontal">
+
+        <com.yj.cosmetics.widget.RoundedImageView.RoundedImageView
+            android:id="@+id/iv_header"
+            android:layout_width="@dimen/dis45"
+            android:layout_height="@dimen/dis45"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_avatar"
+            app:riv_oval="true"/>
+
+        <LinearLayout
+            android:layout_width="@dimen/dis0"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dis10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="菲梵仙子用户1"
+                android:textColor="@color/black_color1"
+                android:textSize="@dimen/font16"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:01"
+                android:textColor="@color/gray_99"
+                android:textSize="@dimen/font11"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/dis10"
+            android:text="￥25"
+            android:textColor="@color/CED_08_3C"
+            android:textSize="@dimen/font17"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dis10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/cashm"
+                android:drawablePadding="@dimen/dis10"
+                android:gravity="center"
+                android:text="提现"
+                android:textSize="@dimen/font16"/>
+
+
+            <TextView
+                android:id="@+id/tv_cash_money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dis10"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="￥25"
+                android:textColor="@color/CED_08_3C"
+                android:textSize="@dimen/font17"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:background="@color/CF5_F5_F5"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dis10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/cashn"
+                android:drawablePadding="@dimen/dis10"
+                android:gravity="center"
+                android:text="提现账户"
+                android:textSize="@dimen/font16"/>
+
+
+            <TextView
+                android:id="@+id/tv_alipay_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dis10"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="15038159398"
+                android:textColor="@color/C66_66_66"
+                android:textSize="@dimen/font17"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dis10"
+            android:layout_marginRight="@dimen/dis10"
+            android:layout_marginBottom="@dimen/dis10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/casht"
+                android:drawablePadding="@dimen/dis10"
+                android:gravity="center"
+                android:text="申请提现时间"
+                android:textSize="@dimen/font16"/>
+
+
+            <TextView
+                android:id="@+id/tv_insert_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dis10"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="2019-07-20  15:25"
+                android:textColor="@color/C66_66_66"
+                android:textSize="@dimen/font17"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dis0.5"
+            android:background="@color/CF5_F5_F5"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dis10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/cashs"
+                android:drawablePadding="@dimen/dis10"
+                android:gravity="center"
+                android:text="状态"
+                android:textSize="@dimen/font16"/>
+
+
+            <TextView
+                android:id="@+id/tv_cash_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dis10"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/C66_66_66"
+                android:textSize="@dimen/font17"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dis2"
+        android:background="@color/CF5_F5_F5"/>
+</LinearLayout>
