@@ -93,6 +93,7 @@ public class ClassifyFrag extends BaseFragment {
 				if (mTitleAdapter.mPosition == postion) {
 					return;
 				}
+				pageNum = 1;
 				classifyId = mTitle.get(postion).getClassify_id();
 				mTitleAdapter.mPosition = postion;
 				doAsyncGetContent();
@@ -155,6 +156,7 @@ public class ClassifyFrag extends BaseFragment {
 			@Override
 			public ClassifyEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
+				LogUtils.e("doAsyncGetTitle json的值" + json);
 				return new Gson().fromJson(json, ClassifyEntity.class);
 			}
 
@@ -212,6 +214,7 @@ public class ClassifyFrag extends BaseFragment {
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePage/searchProductList")
 				.addParams("data", URLBuilder.format(map))
 				.tag(getActivity()).build().execute(new Utils.MyResultCallback<ClassifyProductEntity>() {
+
 			@Override
 			public ClassifyProductEntity parseNetworkResponse(Response response) throws Exception {
 				String json = response.body().string().trim();
