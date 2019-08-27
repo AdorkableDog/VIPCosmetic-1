@@ -292,24 +292,14 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 //                ((CouponReceiveHolder) holder).rlNo.setVisibility(View.VISIBLE);
 //                ((CouponReceiveHolder) holder).llYes.setVisibility(View.GONE);
 			}
-
+			webViewInit(((JudgeViewHolder) holder).WebViews);
+			if (data != null && !TextUtils.isEmpty(data.getData().getProductUrl())) {
+				String productUrl = data.getData().getProductUrl();
+				((JudgeViewHolder) holder).WebViews.loadUrl(URLBuilder.URLBaseHeader + data.getData().getProductUrl());
+			}
 			mContext.judgeHeight = ((JudgeViewHolder) holder).llYes.getHeight() * size * size;
 		} else if (holder instanceof WebViewHolder) {
-
-//			webViewInit(((WebViewHolder) holder).mWebView);
-
 			mWebView = (WebView) holder.itemView;
-			//"http://www.51xianchang.com//project/189/detail.act"
-			if (data != null) {
-//                LogUtils.i("jsp的值=====" + data.getDetailJsp());
-			}
-			if (data != null && !TextUtils.isEmpty(data.getData().getProductUrl())) {
-				Log.e("TAG====", "onBindViewHolder: "+ data.getData().getProductUrl() );
-//				mWebView.loadUrl(URLBuilder.URLBaseHeader + data.getData().getProductUrl());
-				mWebView.loadUrl("https://www.jianshu.com/p/cd64517d8ee2");
-//				((WebViewHolder) holder).mWebView.loadUrl("http://www.wendiapp.com/phone/homePage/detailJsp.act?productId=852");
-			}
-
 		} else if (holder instanceof SuYuanViewHolder) {
 
 		}
@@ -455,6 +445,9 @@ public class GoodsDetailContentAdapter extends RecyclerView.Adapter<RecyclerView
 		RelativeLayout rlNo;
 		@BindView(R.id.goods_detial_judge_ll_yes)
 		LinearLayout llYes;
+
+		@BindView(R.id.webViews)
+		com.yj.cosmetics.widget.mWebView WebViews;
 
 		public JudgeViewHolder(View itemView) {
 			super(itemView);

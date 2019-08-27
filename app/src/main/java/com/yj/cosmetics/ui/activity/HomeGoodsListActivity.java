@@ -295,7 +295,6 @@ public class HomeGoodsListActivity extends BaseActivity {
 				startActivityForResult(intent, Variables.REQUEST_CODE);
 				break;
 			case R.id.goods_list_info:
-
 				if (mUtils.isLogin()) {
 					IntentUtils.IntentToInfoCenter(this);
 				} else {

@@ -132,12 +132,21 @@ public class CartFrag extends BaseFragment implements CartListAdapter.CheckInter
 					sproductId = mList.get(postion).getShopProArray().get(pos).getSproductId();
 					productId = mList.get(postion).getShopProArray().get(pos).getProId();
 					if (productId != null && !productId.equals("")) {
-						Intent intent = new Intent(getContext(), GoodsDetailActivity.class);
-						intent.putExtra("sproductId", sproductId);
-						intent.putExtra("productId", productId);
-						startActivity(intent);
+						if (mList.get(postion).getShopProArray().get(pos).getProductState() == 0) {
+							Intent intent = new Intent(getContext(), GoodsDetailActivity.class);
+							intent.putExtra("sproductId", sproductId);
+							intent.putExtra("productId", productId);
+							startActivity(intent);
+						} else if (mList.get(postion).getShopProArray().get(pos).getProductState() == 1) {
+							ToastUtils.custom(" 购买的商品已下架╭(╯^╰)╮", 400);
+						} else if (mList.get(postion).getShopProArray().get(pos).getProductState() == 2) {
+							ToastUtils.custom(" 购买的商品已售罄╭(╯^╰)╮", 400);
+						} else {
+							ToastUtils.custom(" 购买的商品错误了╭(╯^╰)╮", 400);
+						}
 					}
 				}
+
 			}
 		});
 		mListAdapter.setOnItemClickListener(new CartListAdapter.ProfitDetialClickListener() {
@@ -166,9 +175,6 @@ public class CartFrag extends BaseFragment implements CartListAdapter.CheckInter
 		});
 		doAsyncGetList();
 	}
-
-	private boolean isTag = true;
-
 
 	@Override
 	public void onResume() {
@@ -251,8 +257,6 @@ public class CartFrag extends BaseFragment implements CartListAdapter.CheckInter
 //					mListAdapter.setNotifyDataSetChanged();
 				}
 				statistics();
-
-
 				break;
 			case R.id.frag_cart_tv_solve:
 				if (checkChoosed()) {
@@ -668,9 +672,6 @@ public class CartFrag extends BaseFragment implements CartListAdapter.CheckInter
 //		mListAdapter.notifyDataSetChanged();
 //		mListAdapter.setNotifyDataSetChanged();
 		statistics();
-		isTag = false;
-
-
 	}
 
 

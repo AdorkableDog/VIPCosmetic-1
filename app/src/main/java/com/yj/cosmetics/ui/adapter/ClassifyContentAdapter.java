@@ -92,11 +92,12 @@ public class ClassifyContentAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 	}
 
 	public void clearData() {
-		data.clear();
+		if (null != data && data.size() > 0) {
+			data.clear();
+		}
 		notifyDataSetChanged();
 	}
-
-
+	
 	class ContentViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 		@BindView(R.id.iv_product_img)
 		ImageView ivProductImg;

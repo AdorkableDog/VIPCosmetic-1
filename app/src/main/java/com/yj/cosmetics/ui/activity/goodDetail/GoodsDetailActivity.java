@@ -293,7 +293,6 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 				}, 600);
 			}
 		});
-
 		mScrollView.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
 			@Override
 			public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
@@ -819,6 +818,7 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 		if (sproductId != null) {
 			map.put("sproductId", sproductId);
 		}
+		LogUtils.i("productDetails - json的值" + map);
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePage/productDetails")
 				.addParams("data", URLBuilder.format(map))
 				.tag(this).build().execute(new Utils.MyResultCallback<GoodsEntitys>() {
@@ -1202,12 +1202,10 @@ public class GoodsDetailActivity extends BaseActivity implements CustomRollPager
 		map.put("userId", mUtils.getUid());
 		map.put("proId", productId);
 		map.put("pro", pro);
-
 		//@TODO 额外增加一个字段：shopId
 		if (data.getData().getProductId() != null) {
 			map.put("shopId", data.getData().getProductId());
 		}
-
 		map.put("proNumber", number);
 		LogUtils.i("传输的值" + URLBuilder.format(map));
 		OkHttpUtils.post().url(URLBuilder.URLBaseHeader + "/phone/homePage/addShopCar")
