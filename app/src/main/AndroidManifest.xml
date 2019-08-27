@@ -363,7 +363,6 @@
         <activity
             android:name="com.yj.cosmetics.ui.activity.goodDetail.GoodsDetailActivity"
             android:hardwareAccelerated="true"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
         <!-- 商品评价 -->
         <activity

@@ -98,8 +98,8 @@ public class MineOrderDetailActivity extends BaseActivity {
 	TextView tvTicket;
 	//	@BindView(R.id.order_detial_goods_num)
 //	TextView tvNumber;
-//	@BindView(R.id.order_detial_goods_sum)
-//	TextView tvGoodsSum;
+	@BindView(R.id.tv_money)
+	TextView tvMoney;
 	@BindView(R.id.order_detial_goods_price)
 	TextView tvGoodsPrice;
 	@BindView(R.id.order_detial_rl_price)
@@ -566,6 +566,11 @@ public class MineOrderDetailActivity extends BaseActivity {
 				rlBottom.setVisibility(View.GONE);
 				vLine.setVisibility(View.GONE);
 				break;
+		}
+		if (data.getItems().get(0).getIsVip().equals("0")) {
+			tvMoney.setText("普通商品实付金额");
+		}else if (data.getItems().get(0).getIsVip().equals("1")){
+			tvMoney.setText("VIP实付金额");
 		}
 		if (data.getIsAccelerate() != null && data.getIsAccelerate().equals("1")) {
 			if (data.getItems().get(0).getIsVip().equals("0")) {

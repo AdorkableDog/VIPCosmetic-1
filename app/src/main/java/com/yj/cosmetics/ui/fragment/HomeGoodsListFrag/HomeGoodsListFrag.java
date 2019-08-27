@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.GridLayoutManager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 
 import com.google.gson.Gson;
@@ -135,6 +136,7 @@ public class HomeGoodsListFrag extends LazyLoadFragment {
 			@Override
 			public void onItemClick(View view, int postion) {
 				Intent intent = new Intent(getContext(), GoodsDetailActivity.class);
+				Log.e("-0-","=1="+mList.get(postion - 1).getProduct_id());
 				intent.putExtra("productId", mList.get(postion - 1).getProduct_id());
 				intent.putExtra("orderId", orderId);
 				startActivity(intent);

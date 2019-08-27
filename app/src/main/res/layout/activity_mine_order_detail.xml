@@ -546,9 +546,10 @@
                         android:layout_marginBottom="@dimen/dis15">
 
                         <TextView
+                            android:id="@+id/tv_money"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="实付金额"
+                            android:text=""
                             android:textColor="@color/C10_10_10"
                             android:textSize="@dimen/font14"/>
 
